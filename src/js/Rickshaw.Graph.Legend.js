@@ -28,9 +28,9 @@ Rickshaw.Graph.Legend = function(args) {
 			line.className += ' disabled';
 		}
 
-		var swatch = document.createElement('div');
-		swatch.className = 'swatch';
-		swatch.style.backgroundColor = series.color;
+		var swatch = document.createElement('i');
+		swatch.className = 'icon-circle-blank';
+		swatch.style.color = series.color;
 
 		line.appendChild(swatch);
 
