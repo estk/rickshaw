@@ -1,4 +1,4 @@
-var Rickshaw = {
+Rickshaw = {
 
 	namespace: function(namespace, obj) {
 
