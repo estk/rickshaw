@@ -30,7 +30,7 @@ Rickshaw.Graph.Legend = function(args) {
 
 		var swatch = document.createElement('i');
 		swatch.className = 'icon-circle-blank';
-		swatch.style.color = series.color;
+		swatch.style.color = series.stroke;
 
 		line.appendChild(swatch);
 
