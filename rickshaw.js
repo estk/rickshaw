@@ -2192,6 +2192,7 @@ Rickshaw.Graph.Legend = function(args) {
 	var element = this.element = args.element;
 	var graph = this.graph = args.graph;
   var style = args.style; //bool
+	var iconClass = args.iconClass || "swatch"; // class to apply to the icon.
 
 	var self = this;
 
@@ -2217,8 +2218,8 @@ Rickshaw.Graph.Legend = function(args) {
 			line.className += ' disabled';
 		}
 
-		var swatch = document.createElement('div');
-		swatch.className = 'swatch';
+		var swatch = document.createElement('i');
+		swatch.className = iconClass;
 		swatch.style.color = series.color;
 
 		line.appendChild(swatch);
