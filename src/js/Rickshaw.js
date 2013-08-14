@@ -1,4 +1,4 @@
-var Rickshaw = {
+Rickshaw = {
 
 	namespace: function(namespace, obj) {
 
@@ -32,9 +32,4 @@ var Rickshaw = {
 		return JSON.parse(JSON.stringify(obj));
 	}
 };
-
-if (typeof module !== 'undefined' && module.exports) {
-	var d3 = require('d3');
-	module.exports = Rickshaw;
-}
 
