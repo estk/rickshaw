@@ -4,10 +4,12 @@ Rickshaw.Graph.Legend = function(args) {
 
 	var element = this.element = args.element;
 	var graph = this.graph = args.graph;
+  var style = args.style; //bool
 
 	var self = this;
 
-	element.classList.add('rickshaw_legend');
+	if (style)
+		element.classList.add('rickshaw_legend');
 
 	var list = this.list = document.createElement('ul');
 	element.appendChild(list);
@@ -30,7 +32,7 @@ Rickshaw.Graph.Legend = function(args) {
 
 		var swatch = document.createElement('div');
 		swatch.className = 'swatch';
-		swatch.style.backgroundColor = series.color;
+		swatch.style.color = series.color;
 
 		line.appendChild(swatch);
 
