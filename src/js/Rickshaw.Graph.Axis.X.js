@@ -65,7 +65,9 @@ Rickshaw.Graph.Axis.X = function(args) {
 
 		this.ticks = this.staticTicks || Math.floor(this.graph.width / this.pixelsPerTick);
 
-		var berth = Math.floor(this.width * berthRate / 2) || 0;
+		// EVAN: Added 5px of padding.
+		var berth = Math.floor(this.width * berthRate / 2 + 5) || 0;
+
 		var transform;
 
 		if (this.orientation == 'top') {
