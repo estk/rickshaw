@@ -65,8 +65,7 @@ Rickshaw.Graph.Axis.X = function(args) {
 
 		this.ticks = this.staticTicks || Math.floor(this.graph.width / this.pixelsPerTick);
 
-		// EVAN: Added 5px of padding.
-		var berth = Math.floor(this.width * berthRate / 2 + 5) || 0;
+		var berth = Math.floor(this.width * berthRate / 2) || 0;
 
 		var transform;
 
@@ -74,8 +73,7 @@ Rickshaw.Graph.Axis.X = function(args) {
 			var yOffset = this.height || this.graph.height;
 			transform = 'translate(' + berth + ',' + yOffset + ')';
 		} else {
-			transform = 'translate(' + berth + ', 0)';
-		}
+			transform = 'translate(' + this.pixelsPerTick/4 + ', 0)';		}
 
 		if (this.element) {
 			this.vis.selectAll('*').remove();
