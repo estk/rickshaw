@@ -31,7 +31,7 @@ Rickshaw.Graph.Legend = function(args) {
 			line.className += ' disabled';
 		}
 
-		var swatch = document.createElement('i');
+		var swatch = document.createElement('div');
 		swatch.className = iconClass;
 		swatch.style.color = series.color;
 
